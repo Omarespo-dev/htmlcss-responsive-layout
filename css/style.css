@@ -2,19 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 body{
     background-color: lightgray;
 }
 
+.clearfix::after{
+    display:table ;
+    content: "";
+    clear: both;
+}
+
 /* HEADER */
+
+.container-booleano .giallo-booleano h1{
+    font-family: "Nerko One", cursive;
+}
 .container-booleano{
     height: 100px;
     display: flex;
     align-items: center;
     background-color: white;
+    
+
 }
 
 .giallo-booleano{
@@ -22,12 +34,13 @@ body{
     /* background-color: gray; */
     width: 100%;
     color: orange;
+    text-align: center;
 }
 
 /* Main */
 
 .container-main{
-    width: 80%;
+    width: 90%;
     margin: 50px auto;
     /*DEBUG  */
     /* background-color:red; */
@@ -89,16 +102,36 @@ body{
 /* BUTTON */
 .button{
     /* DEBUG */
-    background-color: blue;
-    height: 80px;
+    /* background-color: blue; */
+    /* height: 80px; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
 }
 
 
+.button-caracter{
+    padding: 5px 10px;
+    border-radius: 9999px;
+    border-style: none;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+.none-text{
+    display: none;
+    color: black;
+}
+
+.none-text strong{
+    margin-left: 5px;
+}
 
 /* BANNER */
 #banner{
     display:none;
-    background-color: white;
+    
 
 }
 
@@ -110,6 +143,7 @@ body{
 
 .presentation p{
    font-size: 20px;
+   padding-top: 20px;
    
    
 
@@ -121,7 +155,9 @@ body{
 
 .presentation h3{
     padding-top: 25px;
-    padding-bottom: 25px;
+    border-bottom: 2px solid orange;
+    padding-bottom: 5px;
+    width: 10%;
 }
 
 
@@ -129,7 +165,8 @@ body{
 .presentation img{
     display: block;
     margin-bottom: 5px;
-    width: 35%;
+    width: 70%;
+    margin-left: 10%;
 }
 
 
@@ -141,19 +178,35 @@ body{
 
 /* FOOTER */
 footer{
-    background-color: violet;
+    background-color: rgba(124,105,164,255);
     /* DEBUG */
-    height: 130px;
+    /* height: 130px; */
 }
 
 .col{
     /* DEBUG */
-    height: 130px;
-    background-color: aqua;
-    border: 2px solid black;
+    /* height: 130px; */
+    /* background-color: aqua; */
+    /* border: 2px solid black; */
+    color: white;
+    text-align: center;
+    padding-top: 10px;
 }
 
+.col-list{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.col p{
+    margin-top: 10px;
+}
 
+.col-list a{
+    color: white;
+    margin-right: 15px;
+    font-size: 13px;
+}
 
 
 
@@ -163,6 +216,11 @@ footer{
 
 /* VERSIONE TABLET */
 @media screen and (min-width:768px) {
+    .giallo-booleano{
+        text-align: start;
+    }
+    
+    
     #banner{
         display: block;
         width: 100%;
@@ -174,9 +232,12 @@ footer{
         
     }
 
-    .col-img{
-        
+    .container-main{
+        width: 85%;
+    
+    
     }
+    
     
     .list-tiramisu{
         display: flex;
@@ -190,7 +251,28 @@ footer{
         float: left;
         margin-right: 15px;
         margin-bottom: 5px;
+        margin-left: 0;
+        width: 30%;
         
+    }
+
+    .col-list {
+        padding-bottom: 20px;
+        
+    }
+
+    .button-caracter{
+        padding: 5px 50px;
+        border-radius: 9999px;
+        border-style: none;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        
+    }
+
+    .none-text{
+        display: none;
     }
 
 
@@ -200,20 +282,44 @@ footer{
 
 /* VERSIONE DESKTOP */
 @media screen and (min-width:992px) {
+    .giallo-booleano{
+        text-align: start;
+    }
+    
+    
     .row{
         display: flex;
         justify-content: space-between;
     }
 
+    .container-main{
+        width: 80%;
+    
+    
+    }
     .list-tiramisu{
         display: block;
        
     }
 
+    .button-caracter{
+        padding: 5px 30px;
+        border-radius: 9999px;
+        border-style: none;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        
+        
+    }
+    .none-text{
+        display: inline;
+    }
 
+    
     .first-ricetta .col-img{
        width: 70%;
-
+       margin-left: 0;
+       
 
     }
 
@@ -225,7 +331,16 @@ footer{
 
 
     footer .col{
-        width: 40%;
+        /* width: 40%; */
+        text-align: start;
+        margin-left: 30px;
+        padding-bottom: 20px;
+        padding-top: 20px;
 
+    }
+
+    .col-list{
+        
+        padding-top: 25px;
     }
 }
