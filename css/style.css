@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: lightgray;
+}
+
+/* HEADER */
+.container-booleano{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+.giallo-booleano{
+    font-size: 30px;
+    /* background-color: gray; */
+    width: 100%;
+    color: orange;
+}
+
+/* Main */
+
+.container-main{
+    width: 80%;
+    margin: 50px auto;
+    /*DEBUG  */
+    background-color:red;
+    min-height: 900px;
+
+
+}
+
+
+/* testi */
+.p-gray{
+    color: lightgray;
+}
+.title-violet{
+    color: rebeccapurple;
+    margin-top: 10px;
+}
+
+
+
+
+/* COLONNA VIDEO E TEXT */
+
+.col-img{
+    /* height: 350px; */
+    background-color: rebeccapurple;
+    border: 2px solid black;
+    
+}
+
+.img-video{
+    width: 100%;
+}
+
+.col-text{
+    /* height: 350px; */
+    background-color: rebeccapurple;
+    border: 2px solid black;
+   
+}
+.col-text h3{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.list-tiramisu{
+    list-style-type: none;
+    margin-top: 20px;
+    color: black;
+}
+
+.list-tiramisu li{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+
+
+/* BUTTON */
+.button{
+    /* DEBUG */
+    background-color: blue;
+    height: 80px;
+}
+
+
+
+/* BANNER */
+#banner{
+    display:none;
+
+}
+
+.banner-img{
+    width: 100%;
+}
+
+/* PRESENTATION */
+
+.presentation p{
+   font-size: 20px;
+   width: 70%;
+   
+
+}
+
+.presentation img{
+    display: block;
+    margin-bottom: 5px;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: violet;
+    /* DEBUG */
+    height: 130px;
+}
+
+.col{
+    /* DEBUG */
+    height: 130px;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+
+
+
+
+/* VERSIONE TABLET */
+@media screen and (min-width:768px) {
+    #banner{
+        display: block;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        /* DEBUG */
+        /* background-color: chartreuse; */
+        /* height: 60px; */
+        
+    }
+
+    .col-text{
+        
+    }
+
+    .list-tiramisu{
+        display: flex;
+        flex-wrap: wrap;
+        
+        justify-content: space-between;
+    }
+
+
+
+    .presentation img{
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        
+    }
+
+
+}
+
+
+
+/* VERSIONE DESKTOP */
+@media screen and (min-width:992px) {
+    .row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-tiramisu{
+        display: block;
+       
+    }
+
+
+    .first-ricetta .col-img{
+       width: 70%;
+
+
+    }
+
+    .first-ricetta .col-text{
+        width: 30%;
+
+
+    }
+
+
+    footer .col{
+        width: 40%;
+
+    }
+}
